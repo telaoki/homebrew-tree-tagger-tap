@@ -4,7 +4,7 @@ class TreeTagger < Formula
 
   homepage "http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/"
   url "http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagger-MacOSX-3.2-intel.tar.gz"
-  sha1 "d823320b718eb41a5b4fef449a711307caaf0d88"
+  sha256 "d823320b718eb41a5b4fef449a711307caaf0d88"
   version "3.2"
 
   option "without-english"         , "Do not install English parameter files."
