@@ -3,7 +3,7 @@ require "formula"
 class TreeTagger < Formula
 
   homepage "http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/"
-  url "http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagger-MacOSX-3.2-intel.tar.gz"
+  url "http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagger-MacOSX-3.2.tar.gz"
   sha256 "d823320b718eb41a5b4fef449a711307caaf0d88"
   version "3.2"
 
