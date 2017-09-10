@@ -105,7 +105,7 @@ class TreeTagger < Formula
           cmd_text.gsub!(/CMD=.*/, "CMD=#{libexec}/cmd")
           cmd_text.gsub!(/LIB=.*/, "LIB=#{libexec}/lib")
         end
-        rescue InreplaceError
+        rescue
           puts "Warning: lines to replace not found in #{cmd_file}"
       end
     end
