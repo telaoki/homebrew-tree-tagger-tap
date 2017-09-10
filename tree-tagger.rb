@@ -99,14 +99,14 @@ class TreeTagger < Formula
     system "./install-tagger.sh"
 
     Dir["cmd/*"].each do |cmd_file|
-      inreplace cmd_file do |cmd_text|
-        begin
-        cmd_text.gsub!(/BIN=.*/, "BIN=#{libexec}/bin")
-        cmd_text.gsub!(/CMD=.*/, "CMD=#{libexec}/cmd")
-        cmd_text.gsub!(/LIB=.*/, "LIB=#{libexec}/lib")
+      begin
+        inreplace cmd_file do |cmd_text|
+          cmd_text.gsub!(/BIN=.*/, "BIN=#{libexec}/bin")
+          cmd_text.gsub!(/CMD=.*/, "CMD=#{libexec}/cmd")
+          cmd_text.gsub!(/LIB=.*/, "LIB=#{libexec}/lib")
+        end
         rescue InreplaceError
           puts "Warning: lines to replace not found in #{cmd_file}"
-        end
       end
     end
 
