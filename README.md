@@ -1,4 +1,5 @@
-compling
+Install tree-tagger via brew on Macos
 ========
 
-A Homebrew tap with formulas for various computational linguistics tools.
+Example:
+$ brew install tree-tagger -with-french -with-french-chunk
