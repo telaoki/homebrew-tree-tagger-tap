@@ -100,9 +100,13 @@ class TreeTagger < Formula
 
     Dir["cmd/*"].each do |cmd_file|
       inreplace cmd_file do |cmd_text|
+        begin
         cmd_text.gsub!(/BIN=.*/, "BIN=#{libexec}/bin")
         cmd_text.gsub!(/CMD=.*/, "CMD=#{libexec}/cmd")
         cmd_text.gsub!(/LIB=.*/, "LIB=#{libexec}/lib")
+        rescue InreplaceError
+          puts "Warning: lines to replace not found in #{cmd_file}"
+        end
       end
     end
 
