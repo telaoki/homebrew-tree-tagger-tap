@@ -118,6 +118,16 @@ class TreeTagger < Formula
     bin.install_symlink Dir["#{libexec}/cmd/*"]
   end
 
+  
+  def caveats; <<-EOS.undent
+     You may want to add to your path 
+      #{libexec}/bin 
+      and 
+      #{libexec}/cmd.
+     EOS
+  end
+  
+  
   test do
     system "false"
   end
