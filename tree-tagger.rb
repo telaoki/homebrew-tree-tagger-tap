@@ -4,7 +4,7 @@ class TreeTagger < Formula
 
   homepage "http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/"
   url "http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagger-MacOSX-3.2.tar.gz"
-  sha256 "49664b53e6478ef9db3a36fbc06fc83dcea60409064fefe92e107612753590a9"
+  sha256 "d7551c50fa8ad99c9df48a9e6ebec10998b16cfee141d35ebab1d019dae9101d"
   version "3.2"
 
   option "without-english"         , "Do not install English parameter files."
@@ -118,16 +118,16 @@ class TreeTagger < Formula
     bin.install_symlink Dir["#{libexec}/cmd/*"]
   end
 
-  
-  def caveats; <<-EOS.undent
-     You may want to add to your path 
-      #{libexec}/bin 
-      and 
+
+  def caveats; <<~EOS
+    You may want to add to your path
+      #{libexec}/bin
+    and
       #{libexec}/cmd.
-     EOS
+  EOS
   end
-  
-  
+
+
   test do
     system "false"
   end

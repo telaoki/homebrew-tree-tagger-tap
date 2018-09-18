@@ -1,6 +1,7 @@
-Install tree-tagger via brew on Macos
+Install tree-tagger via brew on macOS
 ========
 
-### Example
+### Installation
 
-`brew install tree-tagger -with-french -with-french-chunk`
+    brew tap adopi/homebrew-tree-tagger-tap
+    brew install tree-tagger --with-french --with-french-chunker`
